@@ -1,0 +1,95 @@
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent);
+    opacity: 0.3;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-year {
+    position: absolute;
+    left: -3rem;
+    /* Adjust based on layout, simplified here */
+    top: 0;
+    background: var(--accent);
+    color: var(--bg-dark);
+    padding: 0.2rem 0.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Adjust timeline for clean look */
+.timeline {
+    padding-left: 0;
+}
+
+.timeline::before {
+    display: none;
+    /* Let's go for stacked cards given the text length */
+}
+
+/* Revert for a better look */
+
+.timeline-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.timeline-year {
+    position: static;
+    min-width: 80px;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline-content h4 {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.timeline-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.timeline-content li {
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .timeline-year {
+        text-align: left;
+        font-size: 1.2rem;
+    }
+}

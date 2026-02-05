@@ -1,0 +1,38 @@
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.edu-card {
+    text-align: center;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.edu-icon {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.edu-year {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.edu-card h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.edu-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
