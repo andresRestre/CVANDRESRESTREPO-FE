@@ -1,0 +1,73 @@
+.contact-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    z-index: 998;
+    padding: 0.8rem 0;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-left,
+.contact-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-legend {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+
+.contact-item:hover {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.icon {
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        justify-content: space-between;
+        /* Keep separate on mobile too usually */
+        padding: 0 1rem;
+    }
+
+    .contact-legend {
+        display: none;
+        /* Hide text on small screens to save space */
+    }
+
+    .contact-left,
+    .contact-right {
+        gap: 1rem;
+    }
+}

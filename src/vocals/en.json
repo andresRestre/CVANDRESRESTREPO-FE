@@ -1,0 +1,124 @@
+{
+    "navbar": {
+        "home": "Home",
+        "profile": "Profile",
+        "studies": "Education",
+        "skills": "Skills",
+        "experience": "Experience",
+        "projects": "Projects"
+    },
+    "hero": {
+        "greeting": "Hi, I appreciate your interest, I'm Andres",
+        "role": "Software analyst and developer",
+        "role2": "Bachelor in Visual Arts",
+        "description": "Specialized in creating efficient and scalable digital solutions."
+    },
+    "contact": {
+        "legend": "Contact me:",
+        "whatsapp": "Chat with me on WhatsApp",
+        "email": "Send me an email",
+        "linkedin": "View my LinkedIn profile",
+        "github": "View my code on GitHub"
+    },
+    "about": {
+        "title": "Profile",
+        "p1": "Software developer with ease for integrating into dynamic work environments, standing out for maintaining excellent interpersonal relationships, leadership, teamwork, and a high sense of responsibility and commitment. I possess the ability to perform effectively under pressure and in critical situations.",
+        "p2": "Additionally, I hold a Bachelor's degree in Visual Arts. Although my professional focus is oriented towards the software world, this complementary background strengthens my ability to articulate with other disciplines, improves my understanding of client requirements, and enhances my visual, creative, and marketing capabilities. Likewise, my teaching profile allows me to learn and transmit knowledge effectively, fostering clear communication and optimal teamwork."
+    },
+    "education": {
+        "title": "Education",
+        "degrees": [
+            {
+                "year": "2025",
+                "institution": "SENA",
+                "degree": "Software Analysis and Development"
+            },
+            {
+                "year": "2018",
+                "institution": "Technological University of Pereira",
+                "degree": "Bachelor in Visual Arts"
+            },
+            {
+                "year": "2011",
+                "institution": "Superior Technical Institute",
+                "degree": "Technical Bachelor in Graphic Design"
+            }
+        ]
+    },
+    "skills": {
+        "title": "Skills",
+        "professional": "Professional",
+        "soft": "Soft Skills",
+        "list": {
+            "projectManagement": "Project Management",
+            "agile": "Agile Methodologies",
+            "adaptability": "Adaptability / Learning",
+            "proactivity": "Proactivity",
+            "organization": "Organization / Planning",
+            "responsibility": "Responsibility",
+            "leadership": "Leadership",
+            "communication": "Assertive Communication"
+        }
+    },
+    "experience": {
+        "title": "Work Experience",
+        "jobs": [
+            {
+                "title": "Software Development Apprentice",
+                "company": "Met Group - Pereira/Risaralda",
+                "details": [
+                    "Back-end / front-end development with Node.js and Angular, PostgreSQL database management.",
+                    "Agile Methodologies / Jira, documentation and requirements gathering.",
+                    "Quality Assurance of all platforms and report automation with Katalon.",
+                    "Linux device management and monitoring."
+                ]
+            },
+            {
+                "title": "Sisben IV Supervisor",
+                "company": "Mayor's Office of Pereira - Pereira/Risaralda",
+                "details": [
+                    "Field supervisor services to support the implementation of the new beneficiary identification platform.",
+                    "Management of mobile data capture devices.",
+                    "Data capture according to DNP manual.",
+                    "Management of work teams."
+                ]
+            },
+            {
+                "title": "Cultural Affairs Assistant",
+                "company": "Bank of the Republic - Pereira/Risaralda",
+                "details": [
+                    "Support as librarian and educator.",
+                    "Internal system management for book classification.",
+                    "Design of educational activities."
+                ]
+            }
+        ]
+    },
+    "projects": {
+        "title": "Projects",
+        "viewMore": "View Project",
+        "list": [
+            {
+                "title": "Competition Management System",
+                "desc": "SENA productive stage project. System for the management and control of competitions of the different strategies in which the Center for Design and Industrial Technological Innovation of Dosquebradas participates.",
+                "tech": [
+                    "React",
+                    "Node.js",
+                    "MySQL"
+                ]
+            },
+            {
+                "title": "Competition Management System",
+                "desc": "SENA productive stage project. System for the management and control of competitions of the different strategies in which the Center for Design and Industrial Technological Innovation of Dosquebradas participates.",
+                "tech": [
+                    "React",
+                    "Node.js",
+                    "MySQL"
+                ]
+            }
+        ]
+    },
+    "footer": {
+        "rights": "All rights reserved"
+    }
+}

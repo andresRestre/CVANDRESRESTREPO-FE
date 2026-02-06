@@ -1,0 +1,118 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
+    /* Limiting max width of columns */
+    justify-content: center;
+    /* Center them if they don't fill width */
+    gap: 2rem;
+}
+
+.project-card {
+    padding: 0;
+    overflow: hidden;
+    /* Shadow and transition handled by global .card styling in index.css now, 
+     but we need to ensure background and border are set if not using .card class directly.
+     Ah, I added .project-card to the list in index.css, so it inherits the floating effect. */
+    background: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    /* Force max width per card */
+    margin: 0 auto;
+    /* Center if single */
+    width: 100%;
+}
+
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-btn {
+    background: var(--accent);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.project-btn:hover {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.tech-badge {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--accent);
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.project-info p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}

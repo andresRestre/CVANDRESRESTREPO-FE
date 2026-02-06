@@ -1,0 +1,115 @@
+{
+    "navbar": {
+        "home": "Inicio",
+        "profile": "Perfil",
+        "studies": "Estudios",
+        "skills": "Habilidades",
+        "experience": "Experiencia",
+        "projects": "Proyectos"
+    },
+    "hero": {
+        "greeting": "Hola, aprecio tu interes soy Andres",
+        "role": "Analista y desarrollador de Software",
+        "role2": "Licenciado en artes visuales",
+        "description": "Especializado en crear soluciones digitales eficientes y escalables."
+    },
+    "contact": {
+        "legend": "Contáctame:",
+        "whatsapp": "Habla conmigo por WhatsApp",
+        "email": "Envíame un correo electrónico",
+        "linkedin": "Ver mi perfil de LinkedIn",
+        "github": "Ver mi código en GitHub"
+    },
+    "about": {
+        "title": "Perfil",
+        "p1": "Desarrollador de software con facilidad para integrarme en entornos laborales dinámicos, destacándome por mantener excelentes relaciones interpersonales, liderazgo, trabajo en equipo, alto sentido de la responsabilidad y compromiso. Poseo capacidad para desempeñarme eficazmente bajo presión y en situaciones críticas.",
+        "p2": "Además, soy licenciado en Artes Visuales. Aunque mi enfoque profesional está orientado al mundo del software, esta formación complementaria fortalece mis habilidades de articulación con otras disciplinas, mejora mi comprensión de los requerimientos del cliente y potencia mi capacidad visual, creativa y de marketing. Asimismo, mi perfil docente me permite aprender y transmitir conocimientos de manera efectiva, favoreciendo una comunicación clara y un óptimo funcionamiento del equipo de trabajo."
+    },
+    "education": {
+        "title": "Estudios",
+        "degrees": [
+            {
+                "year": "2025",
+                "institution": "SENA",
+                "degree": "Análisis y desarrollo de software"
+            },
+            {
+                "year": "2018",
+                "institution": "Universidad Tecnológica de Pereira",
+                "degree": "Licenciatura en artes visuales"
+            },
+            {
+                "year": "2011",
+                "institution": "Instituto Técnico Superior",
+                "degree": "Bachiller técnico en diseño gráfico"
+            }
+        ]
+    },
+    "skills": {
+        "title": "Habilidades",
+        "professional": "Profesionales",
+        "soft": "Blandas",
+        "list": {
+            "projectManagement": "Administración de proyectos",
+            "agile": "Metodologías ágiles",
+            "adaptability": "Adaptabilidad / Aprendizaje",
+            "proactivity": "Proactividad",
+            "organization": "Organización / Planeación",
+            "responsibility": "Responsabilidad",
+            "leadership": "Liderazgo",
+            "communication": "Comunicación asertiva"
+        }
+    },
+    "experience": {
+        "title": "Experiencia Laboral",
+        "jobs": [
+            {
+                "title": "Aprendiz en desarrollo de software",
+                "company": "Met Group - Pereira/Risaralda",
+                "details": [
+                    "Desarrollo back-end / front-end Node js y Angular, manejo de bases de datos en PostgreSQL.",
+                    "Metodologías ágiles / Jira, documentación y levantamiento de requisitos.",
+                    "Quality Assurance de todas las plataformas y automatización de informes con Katalon.",
+                    "Manejo de dispositivos Linux y monitorización."
+                ]
+            },
+            {
+                "title": "Supervisor Sisben IV",
+                "company": "Alcaldía de Pereira - Pereira/Risaralda",
+                "details": [
+                    "Prestar los servicios como supervisor de campo para apoyar la implementación de la nueva plataforma.",
+                    "Manejo de dispositivos móviles de captura de datos.",
+                    "Captura de datos según manual proporcionado por el DNP.",
+                    "Manejo de equipos de trabajo a cargo."
+                ]
+            },
+            {
+                "title": "Auxiliar asuntos culturales",
+                "company": "Banco de la República - Pereira/Risaralda",
+                "details": [
+                    "Prestar el apoyo como bibliotecario y educador.",
+                    "Manejo del sistema interno para clasificación de libros.",
+                    "Diseño de actividades educativas."
+                ]
+            }
+        ]
+    },
+    "projects": {
+        "title": "Proyectos",
+        "viewMore": "Ver Proyecto",
+        "list": [
+            {
+                "title": "Sistema de Gestión de Competiciones",
+                "desc": "Proyecto de la etapa productiva del SENA. Sistema para la gestión y control de competiciones de las diferentes estrategias en las que participa El Centro de Diseño e Innovación Tecnológica Industrial de Dosquebradas.",
+                "tech": [
+                    "React",
+                    "Node.js",
+                    "MySQL"
+                ]
+            }
+        ]
+    },
+    "footer": {
+        "rights": "Todos los derechos reservados"
+    }
+}
