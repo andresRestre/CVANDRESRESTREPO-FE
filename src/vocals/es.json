@@ -11,7 +11,9 @@
         "greeting": "Hola, aprecio tu interes soy Andres",
         "role": "Analista y desarrollador de Software",
         "role2": "Licenciado en artes visuales",
-        "description": "Especializado en crear soluciones digitales eficientes y escalables."
+        "description": "Especializado en crear soluciones digitales eficientes y escalables.",
+        "downloadCV": "Descargar CV",
+        "viewPortfolio": "Ver Portafolio"
     },
     "contact": {
         "legend": "Contáctame:",
@@ -57,7 +59,8 @@
             "organization": "Organización / Planeación",
             "responsibility": "Responsabilidad",
             "leadership": "Liderazgo",
-            "communication": "Comunicación asertiva"
+            "communication": "Comunicación asertiva",
+            "english": "Inglés"
         }
     },
     "experience": {

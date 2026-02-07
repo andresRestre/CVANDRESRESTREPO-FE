@@ -22,15 +22,26 @@ const Hero = () => {
 
                 <div className="hero-main reveal">
                     <div className="readme-box">
-                        
+
                         <div className="readme-content">
                             <h2 className="greeting">{t('hero.greeting')}</h2>
                             <p className="bio">
                                 {t('hero.description')}
                             </p>
-                            <hr className="divider" />
-                            <p className="bio-detail">{t('about.p1')}</p>
-                            <p className="bio-detail">{t('about.p2')}</p>
+
+                            <div className="bio-details">
+                                <p className="bio-paragraph">{t('about.p1')}</p>
+                                <p className="bio-paragraph">{t('about.p2')}</p>
+                            </div>
+
+                            <div className="hero-actions">
+                                <a href="/AndresFelipeRestrepoHurtado.pdf" download="AndresFelipeRestrepoHurtado.pdf" className="btn btn-primary">
+                                    {t('hero.downloadCV')}
+                                </a>
+                                <a href="#projects" className="btn btn-outline">
+                                    {t('hero.viewPortfolio')}
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

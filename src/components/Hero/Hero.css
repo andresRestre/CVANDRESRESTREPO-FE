@@ -1,136 +1,210 @@
 .hero {
     min-height: 100vh;
-    padding-top: calc(var(--nav-height) + 2rem);
+    padding-top: 2rem;
     display: flex;
-    align-items: flex-start;
-    /* Top align for sidebar feel */
+    align-items: center;
+    /* Center vertically if content permits */
+    justify-content: center;
 }
 
 .hero-container {
     display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 3rem;
+    grid-template-columns: 1fr 1.2fr;
+    /* Give more space to description */
+    gap: 4rem;
     width: 100%;
+    align-items: center;
+    /* Vertically align items */
 }
 
 /* Sidebar Layout (Profile Left) */
 .hero-sidebar {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .sidebar-sticky {
-    position: sticky;
-    top: 100px;
-    /* Below Navbar */
+    position: relative;
+    /* Remove sticky if we want static alignment, or keep sticky for long pages */
+    /* top: 100px; */
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
 .image-wrapper {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1/1;
+    /* Square */
+    border-radius: 24px;
+    /* Rounded Rect */
     overflow: hidden;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    z-index: 10;
+    /* border: 1px solid var(--border-color); */
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+    margin-bottom: 1rem;
+    background: var(--bg-card);
+    /* Placeholder bg */
 }
 
 .image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .profile-name {
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 1.1;
-    font-weight: 700;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    color: var(--accent);
+    display: block;
+    /* Force new line logic or emphasize */
 }
 
 .profile-role {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--text-secondary);
-    font-weight: 400;
-    border-bottom: 2px solid var(--accent);
-    padding-bottom: 0.5rem;
-    display: inline-block;
-    width: fit-content;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1.5;
+    /* Remove bottom border style from previous */
+    border: none;
+    padding: 0;
 }
 
-/* Main Content (Readme Style) */
+/* Main Content (Bio Card) */
 .hero-main {
-    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .readme-box {
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: 24px;
     background: var(--bg-card);
     overflow: hidden;
-}
-
-.readme-header {
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border-bottom: 1px solid var(--border-color);
-    font-family: monospace;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .readme-content {
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .greeting {
-    font-size: 2rem;
-    /* Larger "Hi I am" inside box */
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    font-weight: 700;
     color: var(--text-primary);
-    border-bottom: none;
-    text-transform: none;
-    letter-spacing: normal;
+    line-height: 1.2;
+    margin: 0;
 }
 
-.divider {
-    border: 0;
-    height: 1px;
-    background: var(--border-color);
-    margin: 2rem 0;
+.bio {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin: 0;
 }
 
-.bio-detail {
+.bio-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.bio-paragraph {
     font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    /* Pill shape */
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+    border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
     color: var(--text-primary);
+}
+
+.btn-outline:hover {
+    border-color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 @media (max-width: 968px) {
+    .hero {
+        padding-top: 6rem;
+        /* Account for top navbar */
+        min-height: auto;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
         text-align: center;
     }
 
-    .sidebar-sticky {
-        position: static;
+    .hero-sidebar {
         align-items: center;
-        /* Center profile on mobile */
     }
 
     .image-wrapper {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        margin: 0 auto 1.5rem;
     }
 
-    .profile-role {
-        margin: 0 auto;
+    .profile-name {
+        font-size: 2.5rem;
     }
 
-    .readme-content {
-        text-align: left;
+    .readme-box {
+        padding: 2rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
     }
 }

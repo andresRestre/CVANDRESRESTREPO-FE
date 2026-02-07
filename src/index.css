@@ -1,6 +1,7 @@
 :root {
   /* Common variables */
   --nav-height: 80px;
+  --nav-width: 250px;
 
   /* Dark Theme (Default) */
   --bg-dark: #0f0f0f;
@@ -155,6 +156,23 @@ ul {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Main App Layout */
+.app {
+  padding-left: var(--nav-width);
+  /* Nav is on left now */
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+@media (max-width: 968px) {
+  .app {
+    padding-left: 0;
+    padding-top: 80px;
+    /* Top nav height */
+  }
 }
 
 ::-webkit-scrollbar {

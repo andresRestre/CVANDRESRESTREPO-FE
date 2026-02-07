@@ -11,7 +11,9 @@
         "greeting": "Hi, I appreciate your interest, I'm Andres",
         "role": "Software analyst and developer",
         "role2": "Bachelor in Visual Arts",
-        "description": "Specialized in creating efficient and scalable digital solutions."
+        "description": "Specialized in creating efficient and scalable digital solutions.",
+        "downloadCV": "Download CV",
+        "viewPortfolio": "View Portfolio"
     },
     "contact": {
         "legend": "Contact me:",
@@ -57,7 +59,8 @@
             "organization": "Organization / Planning",
             "responsibility": "Responsibility",
             "leadership": "Leadership",
-            "communication": "Assertive Communication"
+            "communication": "Assertive Communication",
+            "english": "English"
         }
     },
     "experience": {
