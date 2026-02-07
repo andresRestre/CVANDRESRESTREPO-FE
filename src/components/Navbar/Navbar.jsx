@@ -31,7 +31,7 @@ const Navbar = () => {
     return key;
   };
 
-  const menuItems = ['home', 'profile', 'studies', 'skills', 'experience', 'projects'];
+  const menuItems = ['projects', 'experience', 'skills', 'studies', 'profile', 'home'];
 
   const sectionIds = {
     home: 'inicio',

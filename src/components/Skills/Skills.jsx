@@ -13,7 +13,8 @@ const professionalSkills = [
     { name: 'PostgreSQL', score: 4 },
     { name: 'React', score: 5 },
     { name: 'Angular', score: 4 },
-    { name: 'Node JS', score: 4 }
+    { name: 'Node JS', score: 4 },
+    { name: 'QT & QML', score: 4 }
 ];
 
 const softSkills = [
@@ -22,7 +23,8 @@ const softSkills = [
     { key: 'organization', score: 5 },
     { key: 'responsibility', score: 5 },
     { key: 'leadership', score: 4 },
-    { key: 'communication', score: 4 }
+    { key: 'communication', score: 4 },
+    { key: 'english', score: 4 }
 ];
 
 const SkillRating = ({ score }) => {
