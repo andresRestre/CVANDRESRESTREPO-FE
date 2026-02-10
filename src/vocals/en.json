@@ -1,19 +1,23 @@
 {
     "navbar": {
         "home": "Home",
-        "profile": "Profile",
-        "studies": "Education",
         "skills": "Skills",
+        "projects": "Projects",
         "experience": "Experience",
-        "projects": "Projects"
+        "studies": "Education",
+        "courses": "Courses"
     },
     "hero": {
-        "greeting": "Hi, I appreciate your interest, I'm Andres",
+        "greeting": "Hi, I appreciate your interest",
         "role": "Software analyst and developer",
         "role2": "Bachelor in Visual Arts",
-        "description": "Specialized in creating efficient and scalable digital solutions.",
+        "description": "I'm specialized in creating efficient and scalable digital solutions.",
         "downloadCV": "Download CV",
-        "viewPortfolio": "View Portfolio"
+        "viewPortfolio": "View Portfolio",
+        "passport": "Passport",
+        "passportStatus": "Valid",
+        "license": "License",
+        "licenseStatus": "A2 & B2"
     },
     "contact": {
         "legend": "Contact me:",
@@ -60,7 +64,11 @@
             "responsibility": "Responsibility",
             "leadership": "Leadership",
             "communication": "Assertive Communication",
-            "english": "English"
+            "english": "English",
+            "git": "Git",
+            "docker": "Docker",
+            "gitlab": "GitLab",
+            "linux": "Linux (Ubuntu server)"
         }
     },
     "experience": {
@@ -68,6 +76,7 @@
         "jobs": [
             {
                 "title": "Software Development Apprentice",
+                "year": "2024 - 2025",
                 "company": "Met Group - Pereira/Risaralda",
                 "details": [
                     "Back-end / front-end development with Node.js and Angular, PostgreSQL database management.",
@@ -78,6 +87,7 @@
             },
             {
                 "title": "Sisben IV Supervisor",
+                "year": "2019 - 2021",
                 "company": "Mayor's Office of Pereira - Pereira/Risaralda",
                 "details": [
                     "Field supervisor services to support the implementation of the new beneficiary identification platform.",
@@ -88,6 +98,7 @@
             },
             {
                 "title": "Cultural Affairs Assistant",
+                "year": "2018 - 2019",
                 "company": "Bank of the Republic - Pereira/Risaralda",
                 "details": [
                     "Support as librarian and educator.",
@@ -100,6 +111,7 @@
     "projects": {
         "title": "Projects",
         "viewMore": "View Project",
+        "viewVideo": "View Video",
         "list": [
             {
                 "title": "Competition Management System",
@@ -108,16 +120,45 @@
                     "React",
                     "Node.js",
                     "MySQL"
-                ]
+                ],
+                "link": "https://talentorisaralda.com/competiciones"
             },
             {
-                "title": "Competition Management System",
-                "desc": "SENA productive stage project. System for the management and control of competitions of the different strategies in which the Center for Design and Industrial Technological Innovation of Dosquebradas participates.",
+                "title": "PLM - Inventory & Lifecycle Management",
+                "desc": "Project for inventory and lifecycle control at Metgroup sas, taxonomies, control and integration with external software API.",
                 "tech": [
-                    "React",
+                    "Angular",
                     "Node.js",
-                    "MySQL"
-                ]
+                    "PostgreSQL",
+                    "Sequelize",
+                    "GitLab",
+                    "JWT"
+                ],
+                "link": "https://plmqa.metgroupsas.com/",
+                "video": "/videos/PLM.mp4"
+            }
+        ]
+    },
+    "courses": {
+        "title": "Courses",
+        "list": [
+            {
+                "year": "2024",
+                "title": "Network Infrastructure Implementation for the Cloud",
+                "duration": "6 hours",
+                "details": "Linux commands, Ubuntu, Deployments and VPS management"
+            },
+            {
+                "year": "2025",
+                "title": "Digital Marketing",
+                "duration": "48 hours",
+                "details": "Creation of campaigns and persuasive communication, adapted to different platforms such as social networks, search engines and SEO. Also, technological tools, risk evaluation and market research."
+            },
+            {
+                "year": "2024",
+                "title": "Model Creation and Application of Data Classification Algorithms with Python",
+                "duration": "48 hours",
+                "details": "Python management, libraries, scripts for data analysis. Pandas and project structuring for analysis."
             }
         ]
     },

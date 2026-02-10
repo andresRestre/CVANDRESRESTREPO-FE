@@ -9,7 +9,7 @@ const ContactBar = () => {
 
     return (
         <div className="contact-bar">
-            <div className="container contact-content">
+            <div className="contact-content">
 
                 <div className="contact-left">
                     <span className="contact-legend">{t('contact.legend')}</span>

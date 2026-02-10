@@ -1,25 +1,23 @@
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
-    /* Limiting max width of columns */
-    justify-content: center;
-    /* Center them if they don't fill width */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project-card {
     padding: 0;
     overflow: hidden;
-    /* Shadow and transition handled by global .card styling in index.css now, 
-     but we need to ensure background and border are set if not using .card class directly.
-     Ah, I added .project-card to the list in index.css, so it inherits the floating effect. */
     background: var(--bg-card);
     display: flex;
     flex-direction: column;
-    max-width: 450px;
-    /* Force max width per card */
-    margin: 0 auto;
-    /* Center if single */
     width: 100%;
 }
 
@@ -115,4 +113,76 @@
     margin-bottom: 0;
     color: var(--text-secondary);
     line-height: 1.6;
+}
+
+.project-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.video-btn {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.video-btn:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* Video Modal Styles */
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    background: var(--bg-dark);
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.close-modal:hover {
+    transform: rotate(90deg);
+}
+
+.modal-video {
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+    }
 }

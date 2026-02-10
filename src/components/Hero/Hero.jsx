@@ -1,4 +1,4 @@
-import React from 'react';
+import { Plane, Car } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import './Hero.css';
 
@@ -12,11 +12,22 @@ const Hero = () => {
                 <div className="hero-sidebar reveal">
                     <div className="sidebar-sticky">
                         <div className="image-wrapper">
-                            <img src="/profile.png" alt="Andres Felipe Restrepo" />
+                            <img src="/images/profile.png" alt="Andres Felipe Restrepo" />
                         </div>
                         <h1 className="profile-name">Andres Felipe<br /> <span className="highlight">Restrepo Hurtado</span></h1>
                         <h3 className="profile-role">{t('hero.role')}</h3>
                         <h3 className="profile-role">{t('hero.role2')}</h3>
+
+                        <div className="hero-badges">
+                            <div className="badge">
+                                <Plane size={18} />
+                                <span>{t('hero.passport')}: <strong className="status-valid">{t('hero.passportStatus')}</strong></span>
+                            </div>
+                            <div className="badge">
+                                <Car size={18} />
+                                <span>{t('hero.license')}: <strong className="status-valid">{t('hero.licenseStatus')}</strong></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -35,7 +46,7 @@ const Hero = () => {
                             </div>
 
                             <div className="hero-actions">
-                                <a href="/AndresFelipeRestrepoHurtado.pdf" download="AndresFelipeRestrepoHurtado.pdf" className="btn btn-primary">
+                                <a href="/documents/AndresFelipeRestrepoHurtado.pdf" download="AndresFelipeRestrepoHurtado.pdf" className="btn btn-primary">
                                     {t('hero.downloadCV')}
                                 </a>
                                 <a href="#projects" className="btn btn-outline">

@@ -81,6 +81,41 @@
     padding: 0;
 }
 
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.badge {
+    background: rgba(10, 90, 104, 0.1);
+    border: 1px solid rgba(10, 90, 104, 0.4);
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: rgba(10, 90, 104, 0.2);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.badge svg {
+    color: var(--accent);
+}
+
+.status-valid {
+    color: var(--accent-tertiary);
+    font-weight: 700;
+}
+
 /* Main Content (Bio Card) */
 .hero-main {
     display: flex;
@@ -94,7 +129,7 @@
     background: var(--bg-card);
     overflow: hidden;
     padding: 3rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 8px 12px 0 rgba(0, 0, 0, 0.3);
 }
 
 .readme-content {

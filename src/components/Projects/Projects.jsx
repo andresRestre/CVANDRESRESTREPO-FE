@@ -1,27 +1,26 @@
-import React from 'react';
-import { ExternalLink, Database, Server, AppWindow } from 'lucide-react';
+import React, { useState } from 'react';
+import { ExternalLink, Database, Server, AppWindow, Play, X, Github, Gitlab, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import './Projects.css';
 
 const Projects = () => {
     const { t } = useLanguage();
     const projectsList = t('projects.list') || [];
-    // Fallback if list is empty or undefined, though keys are set.
-    // We only have one real project now, but logic supports many.
-    // We add images manually since JSON doesn't handle imports well or we map by index.
+    const [selectedVideo, setSelectedVideo] = useState(null);
 
-    // Manual mapping for images and links since translation files are text only
     const projectImages = [
-        '/project-sena.png',
-        'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
+        '/images/project-sena.png',
+        '/images/plm-project.png', // Assuming user saves the image with this name
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
     ];
 
     const getIcon = (techName) => {
         const lower = techName.toLowerCase();
-        if (lower.includes('react')) return <AppWindow size={16} />;
-        if (lower.includes('node')) return <Server size={16} />;
-        if (lower.includes('sql') || lower.includes('data')) return <Database size={16} />;
+        if (lower.includes('react') || lower.includes('angular')) return <AppWindow size={14} />;
+        if (lower.includes('node')) return <Server size={14} />;
+        if (lower.includes('sql') || lower.includes('data') || lower.includes('postgres') || lower.includes('sequel')) return <Database size={14} />;
+        if (lower.includes('gitlab')) return <Gitlab size={14} />;
+        if (lower.includes('jwt')) return <ShieldCheck size={14} />;
         return null;
     };
 
@@ -33,11 +32,18 @@ const Projects = () => {
                     {Array.isArray(projectsList) && projectsList.map((project, index) => (
                         <div key={index} className="project-card reveal" style={{ animationDelay: `${index * 0.1}s` }}>
                             <div className="project-image">
-                                <img src={projectImages[index] || projectImages[1]} alt={project.title} />
+                                <img src={projectImages[index] || projectImages[0]} alt={project.title} />
                                 <div className="project-overlay">
-                                    <a href="https://talentorisaralda.com/competiciones" className="project-btn">
-                                        {t('projects.viewMore')} <ExternalLink size={16} />
-                                    </a>
+                                    <div className="project-actions">
+                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-btn">
+                                            {t('projects.viewMore')} <ExternalLink size={16} />
+                                        </a>
+                                        {project.video && (
+                                            <button onClick={() => setSelectedVideo(project.video)} className="project-btn video-btn">
+                                                {t('projects.viewVideo')} <Play size={16} />
+                                            </button>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                             <div className="project-info">
@@ -55,6 +61,21 @@ const Projects = () => {
                     ))}
                 </div>
             </div>
+
+            {/* Video Modal */}
+            {selectedVideo && (
+                <div className="video-modal" onClick={() => setSelectedVideo(null)}>
+                    <div className="modal-content" onClick={e => e.stopPropagation()}>
+                        <button className="close-modal" onClick={() => setSelectedVideo(null)}>
+                            <X size={24} />
+                        </button>
+                        <video controls autoPlay className="modal-video">
+                            <source src={selectedVideo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

@@ -22,8 +22,7 @@ const Experience = () => {
                   Actually, updating JSONs is better.
               */}
                             <div className="timeline-year">
-                                {/* Temporary fallback or I need to update JSONs urgently. */}
-                                {index === 0 ? '2025' : index === 1 ? '2019' : '2018'}
+                                {job.year}
                             </div>
                             <div className="timeline-content card">
                                 <h3>{job.title}</h3>
