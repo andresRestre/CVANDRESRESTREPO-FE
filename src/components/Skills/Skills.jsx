@@ -5,16 +5,15 @@ import './Skills.css';
 const professionalSkills = [
     { key: 'projectManagement', score: 4 },
     { key: 'agile', score: 5 },
-    // These are tech names, usually don't need translation but let's see if I put them in JSON.
-    // In JSON I didn't put specific tech names like React, Angular, Node JS, PostgreSQL.
-    // I should probably add them or just render them as string if no translation found.
-    // Actually, tech names are universal. `t` function returns key if not found.
-    // Let's allow mixed content.
     { name: 'PostgreSQL', score: 4 },
     { name: 'React', score: 5 },
     { name: 'Angular', score: 4 },
     { name: 'Node JS', score: 4 },
-    { name: 'QT & QML', score: 4 }
+    { name: 'QT & QML', score: 4 },
+    { name: 'Git', score: 5 },
+    { name: 'Docker', score: 3 },
+    { name: 'GitLab', score: 4 },
+    { name: 'Linux', score: 4 },
 ];
 
 const softSkills = [

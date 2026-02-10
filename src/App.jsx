@@ -6,11 +6,11 @@ import Education from './components/Education/Education';
 import Skills from './components/Skills/Skills';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
+import Courses from './components/Courses/Courses';
 import ContactBar from './components/ContactBar/ContactBar';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import { LanguageProvider } from './context/LanguageContext';
-import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   useEffect(() => {
@@ -44,20 +44,18 @@ function App() {
 
   return (
     <LanguageProvider>
-      <ThemeProvider>
-        <div className="app">
-          <Navbar />
-          <Hero />
-          <About />
-          <Projects />
-          <Education />
-          <Skills />
-          <Experience />
-          <Footer />
-          <ContactBar />
-          <ScrollToTop />
-        </div>
-      </ThemeProvider>
+      <div className="app">
+        <Navbar />
+        <Hero />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Education />
+        <Courses />
+        <Footer />
+        <ContactBar />
+        <ScrollToTop />
+      </div>
     </LanguageProvider>
   );
 }

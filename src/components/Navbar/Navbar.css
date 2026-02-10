@@ -1,18 +1,23 @@
 .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
+    top: 2rem;
+    left: 2rem;
+    height: calc(100vh - 4rem);
     width: var(--nav-width);
     z-index: 1000;
     transition: all 0.3s ease;
-    background: var(--bg-dark);
-    border-right: 1px solid var(--border-color);
+    background: var(--bg-card);
+    /* Glass background */
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 5px 8px 12px 0 rgba(0, 0, 0, 0.3);
 }
 
 .nav-content {
@@ -26,12 +31,25 @@
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--accent);
     cursor: pointer;
-    letter-spacing: 2px;
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    color: var(--red-lava);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
 }
 
 .desktop-menu {
@@ -74,11 +92,16 @@
 }
 
 .nav-link:hover {
-    color: var(--accent);
+    color: var(--accent-tertiary);
+}
+
+.nav-link:active {
+    color: var(--accent-secondary);
 }
 
 .nav-link:hover::after {
     width: 50%;
+    background-color: var(--accent-tertiary);
 }
 
 .controls {
@@ -92,18 +115,20 @@
 
 .icon-btn {
     background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border: none;
     color: var(--text-secondary);
     padding: 0.5rem;
     cursor: pointer;
-    display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
 }
 
 .icon-btn:hover {
-    color: var(--accent);
+    color: var(--accent-tertiary);
 }
 
 .lang-code {
@@ -128,9 +153,13 @@
         width: 100%;
         flex-direction: row;
         padding: 1rem 2rem;
-        border-right: none;
+        border: none;
         border-bottom: 1px solid var(--border-color);
         background: var(--bg-card);
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        margin: 0;
     }
 
     .nav-content {
@@ -144,6 +173,11 @@
 
     .logo {
         margin-bottom: 0;
+    }
+
+    .logo-img {
+        width: 50px;
+        height: auto;
     }
 
     .controls {

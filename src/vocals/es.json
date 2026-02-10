@@ -1,19 +1,23 @@
 {
     "navbar": {
         "home": "Inicio",
-        "profile": "Perfil",
-        "studies": "Estudios",
         "skills": "Habilidades",
+        "projects": "Proyectos",
         "experience": "Experiencia",
-        "projects": "Proyectos"
+        "studies": "Estudios",
+        "courses": "Cursos"
     },
     "hero": {
-        "greeting": "Hola, aprecio tu interes soy Andres",
+        "greeting": "Hola, aprecio tu interes.",
         "role": "Analista y desarrollador de Software",
         "role2": "Licenciado en artes visuales",
-        "description": "Especializado en crear soluciones digitales eficientes y escalables.",
+        "description": "Estoy especializado en crear soluciones digitales eficientes y escalables.",
         "downloadCV": "Descargar CV",
-        "viewPortfolio": "Ver Portafolio"
+        "viewPortfolio": "Ver Portafolio",
+        "passport": "Pasaporte",
+        "passportStatus": "Vigente",
+        "license": "Licencia",
+        "licenseStatus": "A2 & B2"
     },
     "contact": {
         "legend": "Contáctame:",
@@ -24,7 +28,7 @@
     },
     "about": {
         "title": "Perfil",
-        "p1": "Desarrollador de software con facilidad para integrarme en entornos laborales dinámicos, destacándome por mantener excelentes relaciones interpersonales, liderazgo, trabajo en equipo, alto sentido de la responsabilidad y compromiso. Poseo capacidad para desempeñarme eficazmente bajo presión y en situaciones críticas.",
+        "p1": "Desarrollador de software con facilidad para integrarme en entornos laborales dinámicos, destacándome por mantener excelentes relaciones interpersonales, liderazgo, trabajo en equipo, alto sentido de responsabilidad y compromiso. Poseo capacidad para desempeñarme eficazmente bajo presión y en situaciones críticas.",
         "p2": "Además, soy licenciado en Artes Visuales. Aunque mi enfoque profesional está orientado al mundo del software, esta formación complementaria fortalece mis habilidades de articulación con otras disciplinas, mejora mi comprensión de los requerimientos del cliente y potencia mi capacidad visual, creativa y de marketing. Asimismo, mi perfil docente me permite aprender y transmitir conocimientos de manera efectiva, favoreciendo una comunicación clara y un óptimo funcionamiento del equipo de trabajo."
     },
     "education": {
@@ -60,7 +64,11 @@
             "responsibility": "Responsabilidad",
             "leadership": "Liderazgo",
             "communication": "Comunicación asertiva",
-            "english": "Inglés"
+            "english": "Inglés",
+            "git": "Git",
+            "docker": "Docker",
+            "gitlab": "GitLab",
+            "linux": "Linux (Ubuntu server)"
         }
     },
     "experience": {
@@ -68,6 +76,7 @@
         "jobs": [
             {
                 "title": "Aprendiz en desarrollo de software",
+                "year": "2024 - 2025",
                 "company": "Met Group - Pereira/Risaralda",
                 "details": [
                     "Desarrollo back-end / front-end Node js y Angular, manejo de bases de datos en PostgreSQL.",
@@ -78,6 +87,7 @@
             },
             {
                 "title": "Supervisor Sisben IV",
+                "year": "2019 - 2021",
                 "company": "Alcaldía de Pereira - Pereira/Risaralda",
                 "details": [
                     "Prestar los servicios como supervisor de campo para apoyar la implementación de la nueva plataforma.",
@@ -88,6 +98,7 @@
             },
             {
                 "title": "Auxiliar asuntos culturales",
+                "year": "2018 - 2019",
                 "company": "Banco de la República - Pereira/Risaralda",
                 "details": [
                     "Prestar el apoyo como bibliotecario y educador.",
@@ -100,6 +111,7 @@
     "projects": {
         "title": "Proyectos",
         "viewMore": "Ver Proyecto",
+        "viewVideo": "Ver Video",
         "list": [
             {
                 "title": "Sistema de Gestión de Competiciones",
@@ -108,7 +120,45 @@
                     "React",
                     "Node.js",
                     "MySQL"
-                ]
+                ],
+                "link": "https://talentorisaralda.com/competiciones"
+            },
+            {
+                "title": "PLM - Gestión de Inventarios y Ciclo de Vida",
+                "desc": "Proyecto para inventarios y control del ciclo de vida en Metgroup sas, taxonomias, control e integracion con API de software externo.",
+                "tech": [
+                    "Angular",
+                    "Node.js",
+                    "PostgreSQL",
+                    "Sequelize",
+                    "GitLab",
+                    "JWT"
+                ],
+                "link": "https://plmqa.metgroupsas.com/",
+                "video": "/videos/PLM.mp4"
+            }
+        ]
+    },
+    "courses": {
+        "title": "Cursos",
+        "list": [
+            {
+                "year": "2024",
+                "title": "Implementación de infraestructura de red para la Cloud",
+                "duration": "6 horas",
+                "details": "Comandos Linux, Ubuntu, Despliegues y manejo de VPS"
+            },
+            {
+                "year": "2025",
+                "title": "Marketing digital",
+                "duration": "48 horas",
+                "details": "Creación de campañas y comunicación persuasiva, adaptadas a diferentes plataformas como redes sociales, buscadores y SEO. Además, herramientas tecnológicas, evaluación de riesgos y estudio de mercado."
+            },
+            {
+                "year": "2024",
+                "title": "Creación de modelos y aplicación de algoritmos de clasificación de datos con python",
+                "duration": "48 horas",
+                "details": "Manejo de Python, librerías, scripts para el análisis de datos. Pandas y estructuración de proyectos para análisis."
             }
         ]
     },

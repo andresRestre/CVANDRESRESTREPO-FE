@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe, Moon, Sun } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
-import { useTheme } from '../../context/ThemeContext';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { t, toggleLanguage, language } = useLanguage();
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,27 +24,22 @@ const Navbar = () => {
     }
   };
 
-  const navKey = (key) => {
-    // Helper to map keys to ID if needed, but we use consistent IDs
-    return key;
-  };
-
-  const menuItems = ['projects', 'experience', 'skills', 'studies', 'profile', 'home'];
+  const menuItems = ['home', 'skills', 'projects', 'experience', 'studies', 'courses'];
 
   const sectionIds = {
     home: 'inicio',
-    profile: 'perfil',
-    studies: 'estudios',
     skills: 'habilidades',
+    projects: 'projects',
     experience: 'experiencia',
-    projects: 'projects'
+    studies: 'estudios',
+    courses: 'cursos'
   };
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-content">
         <div className="logo" onClick={() => scrollTo('inicio')}>
-          AR
+          <img src="/icons/ARlogo.svg" alt="AR Logo" className="logo-img" />
         </div>
 
         <div className="desktop-menu">
@@ -62,9 +55,6 @@ const Navbar = () => {
         </div>
 
         <div className="controls">
-          <button className="icon-btn" onClick={toggleTheme} title="Toggle Theme">
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
           <button className="icon-btn" onClick={toggleLanguage} title="Change Language">
             <Globe size={20} />
             <span className="lang-code">{language.toUpperCase()}</span>
